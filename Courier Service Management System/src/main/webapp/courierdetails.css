@@ -1,0 +1,125 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    position: absolute;
+    transform: translate(-65%,-5%);
+    left: 60%;
+    top:6%;
+}
+
+form {
+    padding: 1em;
+    text-align: left;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(6.0px);
+    border-radius: 1em;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 30%;
+}
+
+form input {
+    width: 80px;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: none;
+    border-radius: 500px;
+    background: transparent;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1.0px);
+    font-family: Montserrat, sans-serif;
+    color: #000;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+form textarea { 
+    width: 200px;
+    height: 70px;   
+    margin-bottom: 1em;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1.0px);
+    font-family: Montserrat, sans-serif;
+    color: #000;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+form input[type="button"] {
+    margin-top: 10px;
+    font-size: 1rem;
+    background: #1793b9;
+    color: #ffffff;
+}
+
+form button {
+    margin-top: 10px;
+    border-radius:2em;
+    font-size: 1rem;
+    background: #17b978;
+    color: #ffffff;
+}
+
+form input[type="radio"]{
+    width:3%;    
+}
+
+form input[type="button"]:hover {
+    cursor: pointer;
+}
+
+form input[type="button"]:active {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+form:hover {
+    margin: 4px;
+}
+
+::placeholder {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    color: #000;
+}
+
+.drop {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    position: absolute;
+    transition: all 0.2s ease;
+}
+
+drop-1 {
+    background: linear-gradient(to right, rgb(142, 45, 226), rgb(74, 0, 224));
+    height: 80px;
+    width: 80px;
+    top: -20px;
+    left: -40px;
+    z-index: -1;
+}
+
+drop-2 {
+    background: linear-gradient(to right, rgb(255, 65, 108), rgb(255, 75, 43));
+    height: 80px;
+    width: 80px;
+    bottom: 90px;
+    right: -50px;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+a,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="contactus.css">
+    <style>
+        body {
+            background-image: url('contactus-background.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form style="height: 450px;" action="contact.jsp" method="post">
+            <img src="contactus-logo.png" height="100px">
+            <a href="homepage.html">
+                <img src="home.png" width="20px">
+            </a><br>
+            <h4>Quick Contact<br>Contact us today, <br>and get reply with in 24 hours!</h4>
+            <input name="name" type="text" placeholder="Your name"><br>
+            <input name="email" type="email" placeholder="Your Email Address"><br>
+            <input name="phonenumber" type="text" placeholder="Your Phone Number"><br>
+            <input name="message" type="textarea" placeholder="Type your Message Here..." style="height: 50px; border-radius:1.5em;"><br>
+            <button onclick="submits()" style="width:200px">Submit</button>
+            <script>            
+            function submits() {
+                if (window.confirm('Thanks for contacting us!\nClick OK to go to homepage.'))
+                {
+                    window.location = "homepage.html";
+                }
+                else{
+                    window.location="contactus.html";
+                }             
+            }
+            </script>
+        </form>        
+    </div>
+</body>
+</html>

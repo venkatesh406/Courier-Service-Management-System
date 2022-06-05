@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Signup Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="customersignup.css">
+    <style>
+        body{
+            background-image: url("customersignup-background.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form style="height: 530px;" action="customersignup.jsp" method="post">
+            <img src="customersignup-logo.png" height="120px" alt="">
+            <h3>Create Your Account</h3>
+            <input type="text" placeholder="First Name" name="fname" required><br> 
+            <input type="text" placeholder="Last Name" name="lname" required><br>
+            <input type="email" placeholder="Email" name="email" required><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="password" placeholder="Password"  name="pass" id="myInput"  required>
+            <input type="checkbox" onclick="myFunction()" 
+            style="width: auto; background: transparent; border-radius: 50%; opacity:0.4;">
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myInput");
+                    if (x.type === "password") {
+                        x.type = "text";
+                    } 
+                    else {
+                        x.type = "password";
+                    }
+                }
+            </script>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="password" placeholder="Confirm Password"  name="cpass"  id="miInput"  required>
+            <input type="checkbox" onclick="miFunction()"
+            style="width: auto; background: transparent; border-radius: 50%; opacity:0.4;"><br>
+            <script>
+                function miFunction() {
+                    var x = document.getElementById("miInput");
+                    if (x.type === "password") {
+                        x.type = "text";
+                    } 
+                    else {
+                        x.type = "password";
+                    }
+                }                
+            </script>           
+            <button style="width: 220px;">Create Account</button>            
+        </form>        
+    </div>
+</body>
+</html>

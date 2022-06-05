@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee-Login Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="employeelogin.css">
+    <style>
+        body{
+            background-image: url("employeelogin-background.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form style="height: 450px;" action="employee.jsp" method="post">
+            <img src="employeelogin-logo.png" height="120px">
+            <a href="homepage.html">
+                <img src="home.png" width="20px">
+            </a><br>
+            <h2>Hello Employee!</h2>
+            <input type="email" placeholder="Email" name="email"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="password" placeholder="Password" id="myInput" name="pass">
+            <input type="checkbox" onclick="myFunction()" 
+            style="width: auto; background: transparent; border-radius: 50%; opacity:0.4;"><br>
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myInput");
+                    if (x.type === "password") {
+                        x.type = "text";
+                    } 
+                    else {
+                        x.type = "password";
+                    }
+                }
+            </script>
+            <button style="width: 150px;" id="myBtn">Log in</button>            
+            <script>
+            var input = document.getElementById("myInput");
+            input.addEventListener("keyup", function(event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    document.getElementById("myBtn").click();
+                }
+            });
+            </script>
+            <br>
+            <a href="forgotpassword.html" style="color:rgb(108, 30, 54)">Forgot Password?</a>
+            <h6>Don't have account?&nbsp;&nbsp;&nbsp;
+                <!--  <a href="homepage.html" style="color:rgb(66, 66, 120)">Go to Homepage</a>&nbsp;&nbsp;&nbsp;-->
+                <a href="employeesignup.html" style="color:rgb(66, 66, 120)">Sign up</a>
+            </h6><br>
+        </form>        
+    </div>
+</body>
+</html>

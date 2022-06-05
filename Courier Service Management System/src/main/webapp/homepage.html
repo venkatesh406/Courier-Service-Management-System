@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>Homepage</title>
+    <link href="homepage.css" rel="stylesheet">
+    <style>
+        body {    
+            margin:0;
+            font-family:Arial;
+            background-image: url('homepage-background.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        a:hover{
+            color: rgb(3, 66, 58);
+        }        
+    </style>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <h4>
+        <a href="homepage.html" class="active">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contactus.html">Contact</a>
+        <div class="dropdown">
+            <button class="dropbtn">Log in 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="customerlogin.html">Customer</a>
+                <a href="employeelogin.html">Employee</a>
+                <a href="adminlogin.html">Admin</a>
+            </div>
+        </div> 
+        </h4>
+    </div>    
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } 
+            else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+</html>

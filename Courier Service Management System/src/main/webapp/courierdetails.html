@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>courier details</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="courierdetails.css">
+    <style>
+        body{
+            background-image: url("courierdetails-background.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form>
+        <h4><b>Please provide the items details of your courier :</b></h4>
+        <h5><b>Name of the user:<input id="name" type="text" style="width: 165px;"></b></h5>
+        <h5><b>Contact Number:<input id="cnumber" type="text" style="width: 110px;"></b></h5>
+        <h5><b>Total no.of items:<input id="items" type="number"></b></h5>
+        <h5><b>Destination Address:<br><br><textarea></textarea>
+        </b></h5>
+        <h5><b>Weight of item(s) (in kg's):&nbsp;<input id="weight" type="number"></b></h5>
+        <h5><b>Total distance(in km's):&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="distance" type="number"></b></h5>
+        <h5><b>Choose the type of item(s) in courier:<br>
+        <input type="radio" name="type" value="fragile" !important>fragile
+        <input type="radio" name="type" value="normal" !important>normal
+        <input type="radio" name="type" value="both" !important>both</b></h5>
+        <h5><b><p>Total cost:&nbsp;<span id = "cost"></span>
+        <input type="button" onClick="costByWeight()" Value="Calculate"></b></h5>
+        <script>
+            function costByWeight(){
+                num1 = document.getElementById("weight").value;
+                num2 = document.getElementById("distance").value;
+                num3 = document.getElementById("items").value;
+                document.getElementById("cost").innerHTML = (num1 * 8)+(num2*6)+(num3*2);
+            }
+        </script>
+        <button id="book" onClick="bookCourier()"><h6><b>Book the courier</b></h6></button>
+        <script>
+            function bookCourier(){
+                alert("Thanks for booking the courier,Your courier will process")    
+            }
+        </script>
+        <a href="homepage.html">
+            <img src="home.png" width="20px">
+        </a>
+    </form>
+    </div>
+</body>
+</html>
